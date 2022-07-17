@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Glassmorphism Card Hover Effects</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Snehil Gupta</h3>
+                <img src="/2.jpg" alt="">
+                <p>This is Snehil Gupta</p>
+                <p>UPSC Aspirant</p>
+                <p>Cleared 1 Time Prelims</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Snehil Gupta</h3>
+                <img src="/3.jpg" alt="">
+                <p>This is Snehil Gupta</p>
+                <p>Professional Sports Player</p>
+                <p>2 Times State Level Player</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Snehil Gupta</h3>
+                    <img src="/4.jpg" alt="">
+                    <p>This is Snehil Gupta</p>
+                    <p>Full Stack Developer</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),
+        {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        }); 
+    </script>
+</body>
+</html>
