@@ -1,0 +1,130 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-rows: repeat(1,3fr);
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+    background-color: #000;
+}
+
+.loader{
+    border: 1px solid blue;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loader:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #000;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    z-index: 1000;
+    z-index: 1;
+    filter: blur(30px);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
+
+.container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Baloo Thambi', cursive;
+    font-size: 2rem;
+    /* color: #fff; */
+}
+
+.container > span{
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px lime, 0 0 50px lime, 0 0 100px lime;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.container > span:nth-child(12){
+    animation-delay: 0.25s;
+}
+.container > span:nth-child(13){
+    animation-delay: 0.5s;
+}
+.container > span:nth-child(14){
+    animation-delay: 0.75s;
+}
+.container > span:nth-child(15){
+    animation-delay: 1s;
+}
+.container > span:nth-child(16){
+animation-delay: 1.25s;
+}
+.container > span:nth-child(17){
+    animation-delay: 1.50s;
+}
+.container > span:nth-child(18){
+    animation-delay: 1.75s;
+}
+.container > span:nth-child(19){
+    animation-delay: 2s;
+}
+.container > span:nth-child(20){
+    animation-delay: 2.25s;
+}
+.container > span:nth-child(21){
+    animation-delay: 2.50s;
+}
+.container > span:nth-child(22){
+    animation-delay: 3s;
+}
+
+
