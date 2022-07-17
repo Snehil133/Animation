@@ -1,0 +1,2215 @@
+
+/*
+  Variables
+*/
+/* Colors */
+/* Sky */
+/* Grid */
+/* Lights */
+/* Houses */
+/* Moon */
+/* Planet */
+/* Windows lights */
+/*
+  Mixins
+*/
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.tron-skyline {
+  height: 540px;
+  margin-bottom: 50px;
+  text-align: center;
+  border-bottom: solid 2px #2989d8;
+  box-shadow: 0 10px 10px rgba(41, 137, 216, 0.6);
+  position: relative;
+  overflow: hidden;
+  /* Central division 
+  &:before {
+    content: '';
+    width: 2px;
+    height: 500px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    opacity: .3;
+    z-index: 10;
+  }*/
+}
+.tron-skyline .skyline {
+  width: 100%;
+  height: 62.5%;
+  background: linear-gradient(to bottom, #1f2a6b 40%, #c146a1 92%, #ff0cb8 100%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .tron-skyline .skyline {
+    height: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .tron-skyline .skyline {
+    height: 58.5%;
+  }
+}
+@media (min-width: 1140px) {
+  .tron-skyline .skyline {
+    height: 55.5%;
+  }
+}
+.tron-skyline .skyline .sky {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.tron-skyline .skyline .sky .stars {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.5) 1px, transparent 1px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px), 
+  radial-gradient(white, white 1px, transparent 5px);
+  background-size: 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+  background-position: 5% 30%, 11% 41%, 16% 12%, 3% 9%, 7% 54%, 15% 35%, 18% 48%, 10% 87%, 26% 33%, 9% 19%, 15% 35%, 21% 11%, 2% 48%, 33% 63%, 54% 18%, 15% 23%, 26% 62%, 47% 37%, 18% 78%, 27% 69%, 20% 5%, 31% 38%, 22% 62%, 51% 39%, 32% 12%, 25% 52%, 56% 30%, 27% 17%, 45% 27%, 29% 19%, 50% 30%, 35% 11%, 12% 22%, 43% 13%, 34% 54%, 85% 25%, 36% 16%, 68% 17%, 41% 18%, 29% 19%, 37% 46%, 31% 21%, 48% 27%, 42% 34%, 54% 4%, 45% 51%, 26% 38%, 13% 4%, 44% 32%, 47% 9%, 30% 10%, 58% 6%, 52% 32%, 63% 6%, 50% 14%, 59% 44%, 56% 16%, 57% 40%, 58% 58%, 59% 19%, 60% 0, 61% 1%, 62% 32%, 63% 23%, 64% 44%, 65% 85%, 66% 36%, 67% 73%, 68% 42%, 69% 9%, 70% 10%, 71% 76%, 72% 36%, 73% 63%, 74% 64%, 75% 88%, 74% 16%, 76% 97%, 78% 18%, 79% 29%, 80% 5%, 81% 65%, 82% 32%, 83% 28%, 84% 62%, 85% 35%, 86% 6%, 81% 13%, 88% 51%, 89% 19%, 90% 0, 91% 41%, 92% 60%, 93% 23%, 94% 54%, 95% 75%, 96% 61%, 97% 70%, 98% 82%, 99% 29%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tron-skyline .skyline .sky .stars:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px),
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.5) 1px, transparent 1px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px),
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px), 
+  radial-gradient(white, white 1px, transparent 5px);
+  background-size: 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+  background-position: 5% 30%, 11% 41%, 16% 12%, 3% 9%, 7% 54%, 15% 35%, 18% 48%, 10% 87%, 26% 33%, 9% 19%, 15% 35%, 21% 11%, 2% 48%, 33% 63%, 54% 18%, 15% 23%, 26% 62%, 47% 37%, 18% 78%, 27% 69%, 20% 5%, 31% 38%, 22% 62%, 51% 39%, 32% 12%, 25% 52%, 56% 30%, 27% 17%, 45% 27%, 29% 19%, 50% 30%, 35% 11%, 12% 22%, 43% 13%, 34% 54%, 85% 25%, 36% 16%, 68% 17%, 41% 18%, 29% 19%, 37% 46%, 31% 21%, 48% 27%, 42% 34%, 54% 4%, 45% 51%, 26% 38%, 13% 4%, 44% 32%, 47% 9%, 30% 10%, 58% 6%, 52% 32%, 63% 6%, 50% 14%, 59% 44%, 56% 16%, 57% 40%, 58% 58%, 59% 19%, 60% 0, 61% 1%, 62% 32%, 63% 23%, 64% 44%, 65% 85%, 66% 36%, 67% 73%, 68% 42%, 69% 9%, 70% 10%, 71% 76%, 72% 36%, 73% 63%, 74% 64%, 75% 88%, 74% 16%, 76% 97%, 78% 18%, 79% 29%, 80% 5%, 81% 65%, 82% 32%, 83% 28%, 84% 62%, 85% 35%, 86% 6%, 81% 13%, 88% 51%, 89% 19%, 90% 0, 91% 41%, 92% 60%, 93% 23%, 94% 54%, 95% 75%, 96% 61%, 97% 70%, 98% 82%, 99% 29%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1%;
+  left: -50%;
+}
+.tron-skyline .skyline .sky .stars:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px),
+  radial-gradient(white, white 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.5) 1px, transparent 1px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 3px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 3px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px),
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 3px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, white 1px, transparent 6px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.4) 1px, transparent 5px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 4px), 
+  radial-gradient(white, rgba(255, 255, 255, 0.3) 1px, transparent 4px), 
+  radial-gradient(white, white 1px, transparent 5px);
+  background-size: 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 10px 10px;
+  background-position: 5% 30%, 11% 41%, 16% 12%, 3% 9%, 7% 54%, 15% 35%, 18% 48%, 10% 87%, 26% 33%, 9% 19%, 15% 35%, 21% 11%, 2% 48%, 33% 63%, 54% 18%, 15% 23%, 26% 62%, 47% 37%, 18% 78%, 27% 69%, 20% 5%, 31% 38%, 22% 62%, 51% 39%, 32% 12%, 25% 52%, 56% 30%, 27% 17%, 45% 27%, 29% 19%, 50% 30%, 35% 11%, 12% 22%, 43% 13%, 34% 54%, 85% 25%, 36% 16%, 68% 17%, 41% 18%, 29% 19%, 37% 46%, 31% 21%, 48% 27%, 42% 34%, 54% 4%, 45% 51%, 26% 38%, 13% 4%, 44% 32%, 47% 9%, 30% 10%, 58% 6%, 52% 32%, 63% 6%, 50% 14%, 59% 44%, 56% 16%, 57% 40%, 58% 58%, 59% 19%, 60% 0, 61% 1%, 62% 32%, 63% 23%, 64% 44%, 65% 85%, 66% 36%, 67% 73%, 68% 42%, 69% 9%, 70% 10%, 71% 76%, 72% 36%, 73% 63%, 74% 64%, 75% 88%, 74% 16%, 76% 97%, 78% 18%, 79% 29%, 80% 5%, 81% 65%, 82% 32%, 83% 28%, 84% 62%, 85% 35%, 86% 6%, 81% 13%, 88% 51%, 89% 19%, 90% 0, 91% 41%, 92% 60%, 93% 23%, 94% 54%, 95% 75%, 96% 61%, 97% 70%, 98% 82%, 99% 29%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 12%;
+  left: 52%;
+}
+.tron-skyline .skyline .sky .lights {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  opacity: 0.6;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(1) {
+  width: 3%;
+  height: 80%;
+  margin-left: 2%;
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 15%, rgba(113, 206, 239, 0.5) 50%, rgba(183, 222, 237, 0.2) 100%);
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(2) {
+  width: 1%;
+  height: 70%;
+  margin-left: 9%;
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 15%, rgba(113, 206, 239, 0.5) 50%, rgba(183, 222, 237, 0.2) 100%);
+  filter: blur(0.7rem);
+  opacity: 0.5;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(3) {
+  width: 1%;
+  height: 70%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc6e6e 78%, #cc7878 100%);
+  filter: blur(0.9rem);
+  opacity: 0.4;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(4) {
+  width: 3%;
+  height: 65%;
+  margin-left: 2%;
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 2%, rgba(33, 180, 226, 0.6) 15%, rgba(113, 206, 239, 0.3) 50%, rgba(183, 222, 237, 0.1) 100%);
+  filter: blur(0.4rem);
+  opacity: 0.5;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(5) {
+  width: 2%;
+  height: 70%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc6e6e 78%, #cc7878 100%);
+  filter: blur(0.9rem);
+  opacity: 0.4;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(6) {
+  width: 3%;
+  height: 50%;
+  margin-left: 4%;
+  background: linear-gradient(to bottom, #ce0404 1%, rgba(204, 110, 110, 0.8) 58%, rgba(204, 120, 120, 0.2) 100%);
+  filter: blur(0.4rem);
+  opacity: 0.3;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(7) {
+  width: 1%;
+  height: 90%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 70%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.6rem);
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(8) {
+  width: 2%;
+  height: 50%;
+  margin-left: 4%;
+  background: linear-gradient(to bottom, #ce0404 1%, rgba(204, 110, 110, 0.8) 58%, rgba(204, 120, 120, 0.2) 100%);
+  filter: blur(0.4rem);
+  opacity: 0.3;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(9) {
+  width: 1%;
+  height: 70%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 70%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.7rem);
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(10) {
+  width: 3%;
+  height: 55%;
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 3%, rgba(33, 180, 226, 0.6) 25%, rgba(113, 206, 239, 0.2) 70%, rgba(183, 222, 237, 0.1) 100%);
+  filter: blur(0.2rem);
+  opacity: 0.7;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(11) {
+  width: 2%;
+  height: 50%;
+  background: linear-gradient(to bottom, #ce0404 1%, rgba(204, 110, 110, 0.8) 58%, rgba(204, 120, 120, 0.2) 100%);
+  filter: blur(0.6rem);
+  opacity: 0.3;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(12) {
+  width: 1%;
+  height: 75%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 60%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.5rem);
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(13) {
+  width: 1%;
+  height: 90%;
+  margin-left: 5%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 70%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.6rem);
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(14) {
+  width: 3%;
+  height: 50%;
+  background: linear-gradient(to bottom, #b7deed 0%, #21b4e2 5%, rgba(33, 180, 226, 0.4) 15%, rgba(113, 206, 239, 0.2) 50%, rgba(183, 222, 237, 0.1) 100%);
+  filter: blur(0.2rem);
+  opacity: 0.7;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(15) {
+  width: 1%;
+  height: 90%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 70%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.6rem);
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(16) {
+  width: 4%;
+  height: 80%;
+  background: linear-gradient(to bottom, #f4e3e1 0%, #f8fc2a 98%);
+  filter: blur(0.6rem);
+  opacity: 0.6;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(17) {
+  width: 1%;
+  height: 90%;
+  background: linear-gradient(to bottom, #ce0404 1%, #cc4343 54%, #cc7878 70%, #ff3d3d 90%, #ff0cb8 100%);
+  filter: blur(0.7rem);
+  opacity: 0.6;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(18) {
+  width: 2%;
+  height: 80%;
+  background: linear-gradient(to right, #f85032 0%, #f16f5c 15%, #f4e3e1 43%, #f02f17 65%, #f8fc2a 100%);
+  filter: blur(0.3rem);
+  opacity: 0.5;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(19) {
+  width: 3%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 12, 184, 0.1) 0%, #c146a1 20%, #21b4e2 30%, rgba(33, 180, 226, 0.4) 40%, rgba(193, 70, 161, 0.2) 50%, rgba(255, 12, 184, 0.1) 100%);
+  filter: blur(0.2rem);
+  opacity: 0.7;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(20) {
+  width: 7%;
+  height: 80%;
+  background: linear-gradient(to bottom, #ff0cb8 0%, #c146a1 20%, rgba(193, 70, 161, 0.5) 100%);
+  filter: blur(0.9rem);
+  opacity: 0.6;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(21) {
+  width: 5%;
+  height: 80%;
+  background: linear-gradient(to right, #f85032 0%, #f16f5c 10%, #f04900 65%, #fc4400 100%);
+  filter: blur(0.7rem);
+  opacity: 0.4;
+}
+.tron-skyline .skyline .sky .lights span:nth-of-type(22) {
+  width: 3%;
+  height: 90%;
+  background: linear-gradient(to bottom, #21b4e2 0%, rgba(33, 180, 226, 0.4) 90%, rgba(193, 70, 161, 0.2) 95%, rgba(255, 12, 184, 0.1) 100%);
+  filter: blur(0.2rem);
+  opacity: 0.2;
+}
+.tron-skyline .skyline .sky .moon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  opacity: 1;
+  background: linear-gradient(to bottom, #1f2a6b 40%, #c146a1 92%, #ff0cb8 100%);
+  box-shadow: inset -20px 10px 70px 0 #beffff;
+}
+.tron-skyline .skyline .sky .moon:after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon:after {
+  background: #f1f1f1;
+}
+.tron-skyline .skyline .sky .moon span {
+  box-shadow: inset 6px -2px 0 0px #f1f1f1;
+  filter: blur(0.2rem);
+}
+.tron-skyline .skyline .sky .moon span:after {
+  background: #010101;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(1) {
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  opacity: 0.4;
+  background: #455d8f;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(1):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(2) {
+  width: 12%;
+  height: 14%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  opacity: 0.5;
+  background: #8dbed2;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(2):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(3) {
+  width: 20%;
+  height: 17%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  opacity: 0.5;
+  background: #8fb9ca;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(3):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(4) {
+  width: 9%;
+  height: 8%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  opacity: 0.4;
+  background: #455d8f;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(4):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(5) {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 11%;
+  left: 20%;
+  opacity: 0.7;
+  background: #344f87;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(5):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(6) {
+  width: 9%;
+  height: 9%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 62%;
+  left: 52%;
+  opacity: 0.5;
+  background: #455d8f;
+}
+.tron-skyline .skyline .sky .moon span:nth-of-type(6):after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .planet {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  top: 8%;
+  left: 14%;
+  opacity: 1;
+  background: linear-gradient(to bottom, #ac3000 40%, #742000 62%, #360e00 100%);
+  box-shadow: inset 5px 2px 0 0 #d73a00;
+}
+.tron-skyline .skyline .sky .planet:after {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 50%;
+  position: absolute;
+  top: -1%;
+  left: 3%;
+  z-index: -1;
+  filter: blur(0.4rem);
+  opacity: 0.8;
+}
+.tron-skyline .skyline .sky .planet:before {
+  content: "";
+  width: 200%;
+  height: 8%;
+  background: linear-gradient(to right, #d73a00 20%, #571800 70%, #360e00 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: rotateZ(10deg);
+  z-index: 1;
+}
+.tron-skyline .skyline .sky .planet:after {
+  background: #ff6e3c;
+}
+.tron-skyline .skyline .city {
+  width: 100%;
+  max-width: 700px;
+  height: 75%;
+  position: relative;
+  align-self: flex-end;
+}
+.tron-skyline .skyline .city .city-back,
+.tron-skyline .skyline .city .city-middle,
+.tron-skyline .skyline .city .city-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+}
+.tron-skyline .skyline .city .city-back div,
+.tron-skyline .skyline .city .city-middle div,
+.tron-skyline .skyline .city .city-front div {
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 100%);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.tron-skyline .skyline .city .city-back div .building-shadow,
+.tron-skyline .skyline .city .city-middle div .building-shadow,
+.tron-skyline .skyline .city .city-front div .building-shadow {
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 116, 210, 0.2);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  filter: blur(0.3rem);
+}
+.tron-skyline .skyline .city .city-back {
+  top: 0;
+  z-index: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(1) {
+  width: 7%;
+  height: 40%;
+  margin-left: 14%;
+  box-shadow: 5px 0 0 #022b60;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(1):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -10%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(1) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(1) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) {
+  width: 4%;
+  height: 45%;
+  margin-left: 9%;
+  box-shadow: 10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) .windows span:nth-of-type(1) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) .windows span:nth-of-type(8) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(2) .windows span:nth-of-type(12) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(3) {
+  width: 3.5%;
+  height: 50%;
+  margin-left: 0.5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(3):before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  margin-top: -60%;
+  margin-left: 20%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(3) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(3) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(3) .windows span {
+  background: linear-gradient(to bottom, #1eb4e2, #1eb4e2 3%, transparent 3%, transparent 9%, #b4e6fa 9%, #b4e6fa 15%, transparent 15%, transparent 21%, #b4e6fa 21%, #b4e6fa 25%, transparent 25%);
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) {
+  width: 3.5%;
+  height: 50%;
+  box-shadow: 5px 0 0 #022b60;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4):before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  margin-top: -60%;
+  margin-left: 20%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 50%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) .windows span:nth-of-type(4) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) .windows span:nth-of-type(6) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(4) .windows span:nth-of-type(9) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) {
+  width: 4%;
+  height: 70%;
+  margin-left: 1%;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5):after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  margin-top: -70%;
+  margin-left: 20%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) .tip {
+  width: 8%;
+  height: 100%;
+  background: #f8fc2a;
+  position: absolute;
+  top: -20%;
+  left: 55%;
+  filter: blur(0.1rem);
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) .windows span:nth-of-type(8) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(5) .windows span:nth-of-type(14) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6) {
+  width: 5%;
+  height: 48%;
+  margin-left: 0.5%;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -40%;
+  margin-left: 15%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6):after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  margin-top: -70%;
+  margin-left: 28%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0;
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6) .tip {
+  width: 8%;
+  height: 100%;
+  background: #f8fc2a;
+  position: absolute;
+  top: -30%;
+  left: 52%;
+  filter: blur(0.1rem);
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(6) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) {
+  width: 6%;
+  height: 76%;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7):before {
+  content: "";
+  width: 60%;
+  height: 80%;
+  margin-top: 100%;
+  margin-left: 26%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 20%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows span:nth-of-type(-n+5) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows span:nth-of-type(14) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows span:nth-of-type(23) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(7) .windows span:nth-of-type(34) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8) {
+  width: 6%;
+  height: 46%;
+  margin-left: 2%;
+  box-shadow: -5px 0 0 #022b60;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8):before {
+  content: "";
+  width: 70%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 20%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8) .windows span:nth-of-type(3) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(8) .windows span:nth-of-type(5) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9) {
+  width: 6%;
+  height: 60%;
+  opacity: 0.9;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9):before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 30%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9) .windows span:nth-of-type(2) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(9) .windows span:nth-of-type(11) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) {
+  width: 4%;
+  height: 57%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -50%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows span:nth-of-type(2) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows span:nth-of-type(9) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows span:nth-of-type(18) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(10) .windows span:nth-of-type(27) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11) {
+  width: 4%;
+  height: 30%;
+  margin-left: 8%;
+  box-shadow: -10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: -5%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11):after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  margin-top: -70%;
+  margin-left: 5%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11) .tip {
+  width: 8%;
+  height: 100%;
+  background: #f8fc2a;
+  position: absolute;
+  top: -40%;
+  left: 28%;
+  filter: blur(0.1rem);
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(11) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(12) {
+  width: 4%;
+  height: 25%;
+  margin-left: 5%;
+  box-shadow: -5px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(12):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(12) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-back div:nth-of-type(12) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-middle {
+  top: 4%;
+  z-index: 2;
+}
+.tron-skyline .skyline .city .city-middle:after {
+  content: "";
+  width: 100%;
+  height: 42%;
+  background: linear-gradient(to right, transparent 10%, rgba(255, 255, 255, 0.5) 50%, transparent 90%);
+  position: absolute;
+  bottom: 0;
+  filter: blur(0.5rem);
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) {
+  width: 8%;
+  height: 40%;
+  margin-left: 40%;
+  box-shadow: 5px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 20%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(6) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(8) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(9) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(15) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(18) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(22) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(25) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(32) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(1) .windows span:nth-of-type(40) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(2) {
+  width: 5%;
+  height: 30%;
+  margin-left: 14%;
+  box-shadow: -10px 0 0 #022b60;
+  top: -1%;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(2) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(2) .windows span {
+  height: 5%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(2) .windows span:nth-of-type(2n) {
+  background: linear-gradient(to right, #1eb4e2, #1eb4e2 5%, transparent 5%, transparent 15%, #1eb4e2 15%);
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) {
+  width: 8%;
+  height: 40%;
+  box-shadow: -5px 0 0 #022b60;
+  top: 2%;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span:nth-of-type(4) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span:nth-of-type(18) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span:nth-of-type(22) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span:nth-of-type(26) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-middle div:nth-of-type(3) .windows span:nth-of-type(27) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front {
+  top: 8%;
+  z-index: 3;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) {
+  width: 11%;
+  height: 16%;
+  box-shadow: 10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -20%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) .windows span {
+  height: 5%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) .windows span:nth-of-type(1) {
+  background-color: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) .windows span:nth-of-type(3) {
+  background-color: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(1) .windows span:nth-of-type(5) {
+  background-color: #fffa00;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) {
+  width: 11%;
+  height: 30%;
+  margin-left: 1%;
+  box-shadow: 10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -10%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 20%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(4) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(13) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(14) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(23) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(26) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(37) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(38) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(39) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(2) .windows span:nth-of-type(40) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) {
+  width: 4%;
+  height: 55%;
+  margin-left: 1%;
+  box-shadow: 5px 0 0 #022b60;
+  top: -2%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3):after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  margin-top: -70%;
+  margin-left: 20%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .tip {
+  width: 8%;
+  height: 100%;
+  background: #f8fc2a;
+  position: absolute;
+  top: -26%;
+  left: 55%;
+  filter: blur(0.1rem);
+  z-index: -2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(6) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(7) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(12) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(19) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(25) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(3) .windows span:nth-of-type(27) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(4) {
+  width: 11%;
+  height: 30%;
+  box-shadow: 10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(4):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -10%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(4) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(4) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(4) .windows span:nth-of-type(2n) {
+  background: linear-gradient(to top, #1eb4e2, #1eb4e2 5%, transparent 5%, transparent 15%, #1eb4e2 15%, #1eb4e2 25%, transparent 25%, transparent 35%, #b4e6fa 35%);
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) {
+  width: 6%;
+  height: 40%;
+  margin-left: 10%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 25%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(4) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(13) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(14) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(23) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(26) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(29) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(30) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(31) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(5) .windows span:nth-of-type(32) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) {
+  width: 8%;
+  height: 18%;
+  margin-left: 1%;
+  box-shadow: -5px 0 0 #022b60;
+  top: -3%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) .windows span:nth-of-type(1) {
+  background-color: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) .windows span:nth-of-type(5) {
+  background-color: #fffa00;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(6) .windows span:nth-of-type(6) {
+  background-color: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(7) {
+  width: 4%;
+  height: 32%;
+  margin-left: 13%;
+  box-shadow: -10px 0 0 #022b60;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(7):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -30%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(7) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(7) .windows span {
+  height: 5%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(7) .windows span:nth-of-type(2n) {
+  background: linear-gradient(to right, #b4e6fa, #1eb4e2 5%, transparent 5%, transparent 15%, #b4e6fa 15%);
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(8) {
+  width: 9%;
+  height: 28%;
+  top: 0;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(8):before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  margin-top: -10%;
+  margin-left: 10%;
+  background: linear-gradient(to bottom, #022b60 0%, #005dac 20%, #005dac 100%);
+  border-top: solid 1px rgba(255, 255, 255, 0.4);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: -5px 0 0 #022b60;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(8) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(8) .windows span {
+  height: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(8) .windows span {
+  background: linear-gradient(to bottom, #1eb4e2, #1eb4e2 5%, transparent 5%, transparent 10%, #1eb4e2 10%);
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) {
+  width: 3%;
+  height: 18%;
+  margin-left: 2%;
+  box-shadow: -5px 0 0 #022b60;
+  top: -1%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) .windows span {
+  height: 5%;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(7, 26, 49, 0.2);
+  border-left: solid 1px rgba(7, 26, 49, 0.2);
+  flex: 1;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) .windows span {
+  background-color: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) .windows span:nth-of-type(1),
+.tron-skyline .skyline .city .city-front div:nth-of-type(9) .windows span:nth-of-type(5) {
+  background-color: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) {
+  width: 5%;
+  height: 16%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5%;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span {
+  width: 10%;
+  height: 10%;
+  border-top: solid 1px rgba(7, 26, 49, 0.1);
+  border-right: solid 1px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  border-left: solid 1px rgba(7, 26, 49, 0.1);
+  flex: 1 1 33.33%;
+  display: block;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(2) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(6) {
+  background: #b4e6fa;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(10) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(13) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(14) {
+  background: #1eb4e2;
+}
+.tron-skyline .skyline .city .city-front div:nth-of-type(10) .windows span:nth-of-type(15) {
+  background: #fffa00;
+}
+.tron-skyline .skyline .city .city-base {
+  width: 102%;
+  position: absolute;
+  bottom: -8%;
+  left: -1%;
+  border: solid 3px #bde0f7;
+  box-shadow: 0 -4px 7px #73c1f2;
+  filter: blur(0.1rem);
+  z-index: 3;
+}
+.tron-skyline .tron-grid {
+  height: 100%;
+  background: linear-gradient(to right, #071a31 0%, #022b60 30%, #005dac 48%, #0068bd 50%, #005dac 52%, #022b60 70%, #071a31 100%);
+}
+.tron-skyline .tron-grid div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tron-skyline .tron-grid div:nth-of-type(1) {
+  z-index: -2;
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span {
+  width: 2px;
+  height: 1000px;
+  background-color: #2989d8;
+  position: absolute;
+  top: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(1) {
+  left: calc((100% / 41) * -13);
+  /* Line position */
+  transform: rotateZ(84deg);
+  /* Line inclination */
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(2) {
+  left: calc((100% / 41) * -10);
+  transform: rotateZ(83deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(3) {
+  left: calc((100% / 41) * -7);
+  transform: rotateZ(82deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(4) {
+  left: calc((100% / 41) * -4);
+  transform: rotateZ(81deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(5) {
+  left: calc((100% / 41) * -1);
+  transform: rotateZ(80deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(6) {
+  left: calc((100% / 41) * 2);
+  transform: rotateZ(78deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(7) {
+  left: calc((100% / 41) * 5);
+  transform: rotateZ(75deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(8) {
+  left: calc((100% / 41) * 9);
+  transform: rotateZ(72deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(9) {
+  left: calc((100% / 41) * 13);
+  transform: rotateZ(65deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(10) {
+  left: calc((100% / 41) * 16);
+  transform: rotateZ(45deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(11) {
+  left: calc((100% / 41) * 19);
+  transform: rotateZ(20deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(12) {
+  left: calc((100% / 41) * 22);
+  transform: rotateZ(-20deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(13) {
+  left: calc((100% / 41) * 25);
+  transform: rotateZ(-45deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(14) {
+  left: calc((100% / 41) * 28);
+  transform: rotateZ(-65deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(15) {
+  left: calc((100% / 41) * 32);
+  transform: rotateZ(-72deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(16) {
+  left: calc((100% / 41) * 36);
+  transform: rotateZ(-75deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(17) {
+  left: calc((100% / 41) * 39);
+  transform: rotateZ(-78deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(18) {
+  left: calc((100% / 41) * 42);
+  transform: rotateZ(-80deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(19) {
+  left: calc((100% / 41) * 45);
+  transform: rotateZ(-81deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(20) {
+  left: calc((100% / 41) * 48);
+  transform: rotateZ(-82deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(21) {
+  left: calc((100% / 41) * 51);
+  transform: rotateZ(-83deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(1) span:nth-of-type(22) {
+  left: calc((100% / 41) * 54);
+  transform: rotateZ(-84deg);
+}
+.tron-skyline .tron-grid div:nth-of-type(2) {
+  z-index: -1;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span {
+  width: 100%;
+  height: 2px;
+  background-color: #2989d8;
+  position: absolute;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(1) {
+  bottom: 8%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(2) {
+  bottom: 15%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(3) {
+  bottom: 21%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(4) {
+  bottom: 26%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(5) {
+  bottom: 30%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(6) {
+  bottom: 33%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(7) {
+  bottom: 35%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(8) {
+  bottom: 36.5%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(9) {
+  bottom: 38%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(10) {
+  bottom: 39.5%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(11) {
+  bottom: 40.8%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(12) {
+  bottom: 42%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(13) {
+  bottom: 42.8%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(14) {
+  bottom: 43.5%;
+}
+.tron-skyline .tron-grid div:nth-of-type(2) span:nth-of-type(15) {
+  bottom: 44%;
+}
+.tron-skyline .tron-grid div:nth-of-type(3) {
+  position: absolute;
+  bottom: 5px;
+}
+.tron-skyline .tron-grid div:nth-of-type(3) h1,
+.tron-skyline .tron-grid div:nth-of-type(3) h2 {
+  font-size: 16px;
+  font-weight: 1.2;
+  color: #f1f1f1;
+  margin: 0 10px;
+  padding: 0 5px;
+  background-color: rgba(0, 104, 189, 0.3);
+  text-shadow: 1px 3px 0 #0068bd;
+}
