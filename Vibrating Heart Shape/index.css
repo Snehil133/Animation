@@ -1,0 +1,134 @@
+
+.main{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+    background-image: url(./New.png);
+    background-repeat: no-repeat;
+    gap: 25rem;
+    /* width: 64rem; */
+    /* padding-left: 5rem; */
+    background-size: 500px 500px;
+    background-position: center;
+}
+
+.heart{
+    height: 70px;
+    width: 70px;
+    margin-top: 10em;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+
+.heart:before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius:50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+.heart1{
+    height: 70px;
+    width: 70px;
+    margin-top: 10rem;
+    background: blue;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px blue;
+    animation: heart 0.6s linear infinite;
+}
+
+
+.heart1:before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: blue;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px blue;
+}
+
+.heart1:after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: blue;
+    right: -50%;
+    border-radius:50px;
+    box-shadow: 10px 10px 90px blue;
+}
+
+.heart2{
+    height: 70px;
+    width: 70px;
+    margin-top: 10rem;
+    background: pink;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px pink;
+    animation: heart 0.6s linear infinite;
+}
+
+.heart2:before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: pink;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px pink;
+}
+
+.heart2:after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: pink;
+    right: -50%;
+    border-radius:50px;
+    box-shadow: 10px 10px 90px pink;
+}
+
+
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+
+
