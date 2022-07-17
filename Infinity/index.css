@@ -1,0 +1,116 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.flex{
+    /* display: flex; */
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background:#111;
+}
+
+.svgBox{
+    width: 200px;
+    height: 200px;
+    margin-left: 8rem;
+}
+
+.svgBox1{
+    width: 200px;
+    height: 200px;
+    margin-left: 8rem;
+}
+
+.svgBox{
+    width: 200px;
+    height: 200px;
+    margin-left: 8rem;
+}
+
+.svgBox svg{
+    fill: none;
+    stroke-width: 10;
+    stroke-width:10;
+    transform: scale(2);
+    stroke: url(#col);
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animate 4s linear infinite;
+}
+
+.svgBox1 svg{
+    fill: none;
+    stroke-width: 10;
+    stroke-width:10;
+    transform: scale(2);
+    stroke: url(#col);
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animate 4s linear infinite;
+}
+
+.svgBox svg{
+    fill: none;
+    stroke-width: 10;
+    stroke-width:10;
+    transform: scale(2);
+    stroke: url(#col);
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 232;
+    }
+}
+
+.svgBox svg:nth-of-type(1){
+    animation: none;
+    stroke: #222;
+    stroke-dasharray: none;
+}
+.svgBox1 svg:nth-of-type(1){
+    animation: none;
+    stroke: #222;
+    stroke-dasharray: none;
+}
+
+.svgBox1 svg:nth-of-type(2){
+    filter: blur(10px);
+}
+
+@media all and (max-width:750px){
+    .flex{
+        /* display: flex; */
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
