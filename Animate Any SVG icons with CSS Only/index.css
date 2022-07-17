@@ -1,0 +1,107 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06181f;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .icon{
+    width: 200px;
+}
+
+.container .icon path{
+    fill: transparent;
+    stroke-width: 10;
+    stroke: #31e8ff;
+}
+
+.container .icon.heart path{
+stroke-dasharray: 3830;
+stroke-dashoffset: 3830;
+}
+
+.container .icon.heart:hover path{
+    animation: animate-heart 2s linear forwards;
+}
+
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 3830;
+    }
+    80%{
+        stroke-dashoffset: 7660;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 7660;
+        fill: #31e8ff;
+    }
+}
+.container .icon.star path{
+stroke-dasharray: 3863;
+stroke-dashoffset: 3863;
+}
+
+.container .icon.star:hover path{
+    animation: animate-star 2s linear forwards;
+}
+
+@keyframes animate-star{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 3863;
+    }
+    80%{
+        stroke-dashoffset: 7726;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 7726;
+        fill: #31e8ff;
+    }
+}
+.container .icon.moon path{
+stroke-dasharray: 3686;
+stroke-dashoffset: 3686;
+}
+
+.container .icon.moon:hover path{
+    animation: animate-moon 2s linear forwards;
+}
+
+@keyframes animate-moon{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 3686;
+    }
+    80%{
+        stroke-dashoffset: 7372;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 7372;
+        fill: #31e8ff;
+    }
+}
